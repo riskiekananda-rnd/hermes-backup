@@ -1,0 +1,365 @@
+{
+  "jobs": [
+    {
+      "id": "d33bae7774df",
+      "name": "hermes-health-check",
+      "prompt": "Jalankan health check untuk Hermes Agent dan FreeLLMAPI. Gunakan output script untuk laporan ringkas.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "custom",
+      "model_snapshot": "mimo-v2-5:free",
+      "base_url": null,
+      "script": "health_check.sh",
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 360,
+        "display": "every 360m"
+      },
+      "schedule_display": "every 360m",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-21T02:37:22.127160+07:00",
+      "next_run_at": "2026-09-21T21:48:04.079745+07:00",
+      "last_run_at": "2026-09-21T15:48:04.079745+07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Connection error.",
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 1,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1358706063",
+        "chat_name": "RGamer-Z",
+        "thread_id": null,
+        "user_id": "1358706063",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-21T08:37:22.193128+07:00",
+        "dispatched_at": "2026-09-21T15:42:39.097738+07:00",
+        "lateness_seconds": 25516.9,
+        "kind": "catch_up"
+      },
+      "fire_claim": null
+    },
+    {
+      "id": "1fc93a4b9c83",
+      "name": "freellmapi-monitor",
+      "prompt": "Monitor status FreeLLMAPI. Gunakan output script untuk laporan.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "custom",
+      "model_snapshot": "mimo-v2-5:free",
+      "base_url": null,
+      "script": "freellmapi_monitor.sh",
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 60,
+        "display": "every 60m"
+      },
+      "schedule_display": "every 60m",
+      "repeat": {
+        "times": null,
+        "completed": 4
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-21T02:37:27.079439+07:00",
+      "next_run_at": "2026-09-21T17:48:40.944258+07:00",
+      "last_run_at": "2026-09-21T16:48:40.944258+07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 404: Model 'mimo-v2-5:free' is not in the catalog. Use 'auto' (or omit the 'model' field) to auto-route, or call /v1/models for the available list.",
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 4,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1358706063",
+        "chat_name": "RGamer-Z",
+        "thread_id": null,
+        "user_id": "1358706063",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-21T16:48:07.697348+07:00",
+        "dispatched_at": "2026-09-21T16:48:39.036124+07:00",
+        "lateness_seconds": 31.3,
+        "kind": "on_time"
+      },
+      "fire_claim": null
+    },
+    {
+      "id": "e7ec9478c3bc",
+      "name": "daily-backup",
+      "prompt": "Backup file-file penting Hermes ke storage bersama. Gunakan output script untuk laporan.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "custom",
+      "model_snapshot": "mimo-v2-5:free",
+      "base_url": null,
+      "script": "daily_backup.sh",
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "display": "every day at 3am"
+      },
+      "schedule_display": "every day at 3am",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-21T02:37:37.919223+07:00",
+      "next_run_at": "2026-09-22T03:00:00+07:00",
+      "last_run_at": "2026-09-21T03:01:02.911626+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1358706063",
+        "chat_name": "RGamer-Z",
+        "thread_id": null,
+        "user_id": "1358706063",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-21T03:00:00+07:00",
+        "dispatched_at": "2026-09-21T03:00:44.625651+07:00",
+        "lateness_seconds": 44.6,
+        "kind": "on_time"
+      },
+      "fire_claim": null
+    },
+    {
+      "id": "a6a5fdf2fada",
+      "name": "Trading Alert Monitor",
+      "prompt": "Run the trading alert checker and report triggered alerts.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "trading_alert.py",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 15,
+        "display": "every 15m"
+      },
+      "schedule_display": "every 15m",
+      "repeat": {
+        "times": null,
+        "completed": 16
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-21T03:08:32.522560+07:00",
+      "next_run_at": "2026-09-21T17:48:55.551737+07:00",
+      "last_run_at": "2026-09-21T17:33:55.551737+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "telegram:-1003990707098:68",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003990707098",
+        "chat_name": "KimerGroup",
+        "thread_id": "68",
+        "user_id": "1358706063",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-21T17:33:40.796529+07:00",
+        "dispatched_at": "2026-09-21T17:33:53.154208+07:00",
+        "lateness_seconds": 12.4,
+        "kind": "on_time"
+      },
+      "fire_claim": null
+    },
+    {
+      "id": "165d44a57981",
+      "name": "Eye Bot Scanner",
+      "prompt": "Run arbitrage scanner and report opportunities.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "eye_bot_alert.py",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 30,
+        "display": "every 30m"
+      },
+      "schedule_display": "every 30m",
+      "repeat": {
+        "times": null,
+        "completed": 7
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-21T03:19:47.785294+07:00",
+      "next_run_at": "2026-09-21T17:45:42.470062+07:00",
+      "last_run_at": "2026-09-21T17:15:42.470062+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "telegram:-1003990707098:68",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003990707098",
+        "chat_name": "KimerGroup",
+        "thread_id": "68",
+        "user_id": "1358706063",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-21T17:14:45.672564+07:00",
+        "dispatched_at": "2026-09-21T17:15:39.036810+07:00",
+        "lateness_seconds": 53.4,
+        "kind": "on_time"
+      },
+      "fire_claim": null
+    },
+    {
+      "id": "91f5825ba2cb",
+      "name": "Trading Bot Monitor",
+      "prompt": "Run trading bot and check for signals.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "trading_bot_alert.py",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 15,
+        "display": "every 15m"
+      },
+      "schedule_display": "every 15m",
+      "repeat": {
+        "times": null,
+        "completed": 15
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-21T03:20:05.085709+07:00",
+      "next_run_at": "2026-09-21T17:48:57.207381+07:00",
+      "last_run_at": "2026-09-21T17:33:57.207381+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "telegram:-1003990707098:68",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003990707098",
+        "chat_name": "KimerGroup",
+        "thread_id": "68",
+        "user_id": "1358706063",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-21T17:33:42.090216+07:00",
+        "dispatched_at": "2026-09-21T17:33:53.154208+07:00",
+        "lateness_seconds": 11.1,
+        "kind": "on_time"
+      },
+      "fire_claim": null
+    }
+  ],
+  "updated_at": "2026-09-21T17:33:57.214903+07:00"
+}
